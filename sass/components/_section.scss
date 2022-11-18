@@ -1,6 +1,9 @@
 .section {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding: 60px 0px; // 94px;
+
+    @media screen and (min-width: 1200px) {
+        padding: 94px 0px;
+    }
 }
 
 .section--top {
@@ -9,4 +12,9 @@
 
 .section--gray {
     background-color: #F5F4FA;
+}
+
+
+.section--hidden {
+    
 }

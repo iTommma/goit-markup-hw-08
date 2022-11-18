@@ -20,11 +20,8 @@
 
 <body>
   <!-- Шапка -->
-  <header class="header">
+  <!-- <header class="header">
     <div class="container header__container">
-
-     
-
       <nav class="nav">
         <a class="logo" href="index.html" lang="en"><span class="logo-web">Web</span>Studio</a>
         <ul class="nav__list">
@@ -54,25 +51,26 @@
         </li>
       </ul>
     </div>
-  </header>
+  </header> -->
+
   <!-- Основна -->
   <main>
+
     <!-- Герой -->
-    <section class="hero">
+    <!-- <section class="hero">
       <div class="container hero__container">
         <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
         <button class="button hero__button" type="button" data-modal-open>Замовити послугу</button>
       </div>
-    </section>
-
+    </section> -->
 
     <!-- Особливості -->
     <section class="section">
-      <div class="container">
+      <div class="container container--padding0">
         <h2 class="is-hidden">Наші особливості</h2>
         <ul class="card-list">
 
-          <li>
+          <li class="card-list__item">
             <div class="card-list__icon">
               <svg width="70" height="70">
                 <use href="./images/icons.svg#icon-antenna"></use>
@@ -84,7 +82,7 @@
             </p>
           </li>
 
-          <li>
+          <li class="card-list__item">
             <div class="card-list__icon">
               <svg width="70" height="70">
                 <use href="./images/icons.svg#icon-clock"></use>
@@ -96,7 +94,7 @@
             </p>
           </li>
 
-          <li>
+          <li class="card-list__item">
             <div class="card-list__icon">
               <svg width="70" height="70">
                 <use href="./images/icons.svg#icon-diagram"></use>
@@ -108,7 +106,7 @@
             </p>
           </li>
 
-          <li>
+          <li class="card-list__item">
             <div class="card-list__icon">
               <svg width="70" height="70">
                 <use href="./images/icons.svg#icon-astronaut"></use>
@@ -124,8 +122,9 @@
       </div>
     </section>
 
+
     <!-- Чим ми займаємося -->
-    <section class="section section--top">
+    <section class="section section--top" section--hidden>
       <div class="container">
         <h2 class="section-title section-title--bottom">Чим ми займаємося</h2>
         <ul class="pictures-list">
@@ -153,8 +152,10 @@
         </ul>
       </div>
     </section>
+
+
     <!-- Наша команда -->
-    <section class="section section--gray">
+    <!-- <section class="section section--gray">
       <div class="container">
         <h2 class="section-title section-title--bottom">Наша команда</h2>
         <ul class="poster">
@@ -311,11 +312,12 @@
           </li>
         </ul>
       </div>
-    </section>
+    </section> -->
+
 
     <!-- Постійні клієнти -->
     <section class="section">
-      <div class="container">
+      <div class="container container--padding0">
         <h2 class="section-title section-title--bottom">Постійні клієнти</h2>
         <ul class="icons">
 
@@ -371,10 +373,13 @@
       </div>
     </section>
   </main>
+
+
   <!-- Футер -->
-  <footer class="footer">
+  <!-- <footer class="footer">
     <div class="container footer-container">
-      <!-- footer logo and address-->
+
+      
       <section>
         <a class="logo" href="index.html" lang="en"><span class="logo-web">Web</span>Studio</a>
         <address class="">
@@ -394,7 +399,8 @@
       </section>
 
       <div class="footer-items">
-        <!-- footer-join-->
+
+        
         <section class="footer-join">
           <h2 class="footer-title-join">приєднуйтесь</h2>
           <ul class="footer-soc-list">
@@ -429,7 +435,7 @@
           </ul>
         </section>
 
-        <!-- footer-subscribe-->
+
         <section class="footer-subscribe">
           <h2 class="footer-title-subscribe">Підпишіться на розсилку</h2>
           <form name="footer-subscribe-form" autocomplete="on">
@@ -447,10 +453,10 @@
       </div>
 
     </div>
-  </footer>
+  </footer> -->
 
   <!-- Modal window -->
-  <div class="backdrop is-hidden" data-modal>
+  <!-- <div class="backdrop is-hidden" data-modal>
     <div class="modal">
       <button class="modal-button" type="button" data-modal-close>
         <svg class="modal-close-icon" width="18" height="18">
@@ -460,7 +466,7 @@
 
       <p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
       <form class="modal-form" autocomplete="on">
-        <!-- label -->
+
         <label class="modal-form-label">
           <span class="modal-label-title">Ім'я</span>
           <input class="modal-form-input" type="text" name="user_name" placeholder=" " />
@@ -482,25 +488,28 @@
             <use href="./images/icons.svg#icon-mail"></use>
           </svg>
         </label>
-        <!-- textarea -->
+
+
         <label class="modal-form-label">
           <span class="modal-label-title">Коментар</span>
           <textarea class="modal-form-textarea" name="feedback" placeholder="Введіть текст"></textarea>
         </label>
-        <!-- inputcheck -->
+
+
         <input class="modal-form-inputcheck is-hidden" type="checkbox" name="accept" value="true" id="check" />
         <label class="check-text" for="check">
           &nbsp; Погоджуюся з розсилкою та приймаю &nbsp; 
           <a class="check-link" href="">Умови договору</a>&nbsp;
         </label>
-        <!-- button -->
+
+
         <button class="modal-send-button" type="submit"><span class="send-button-text">Відправити</span></button>
 
       </form>
     </div>
 
-  </div>
-  <script src="./js/modal.js"></script>
+  </div> -->
+  <!-- <script src="./js/modal.js"></script> -->
 </body>
 
 </html>

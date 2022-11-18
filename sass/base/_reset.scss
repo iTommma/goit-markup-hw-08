@@ -2,8 +2,8 @@
 *::before,
 *::after {
     box-sizing: border-box;
-    /* outline: 1px solid tomato;
-  outline-offset: -2px; */
+    // outline: 1px solid tomato;
+    // outline-offset: -2px;
 }
 
 p,
@@ -38,4 +38,7 @@ a {
 
 img {
     display: block;
+    max-width: 100%;
+    height: auto;
+    width: 100%; //временно
 }
