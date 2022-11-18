@@ -1,0 +1,37 @@
+.card-list {
+    display: flex;
+    gap: 30px;
+
+
+    &__icon {
+        width: 270px;
+        height: 120px;
+        background: #F5F4FA;
+        border-radius: 4px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__subtitle {
+        font-size: var(--font-size-14);
+        line-height: 1.14;
+        font-weight: var(--font-weight-700);
+        text-transform: uppercase;
+        color: var(--title-text-color);
+
+        margin-bottom: 10px;
+        margin-top: 30px;
+        width: 270px;
+    }
+
+    &__text {
+        font-size: var(--font-size-14);
+        font-size: 14px;
+        line-height: 1.71;
+        color: var(--primary-text-color);
+
+        width: 270px;
+    }
+}

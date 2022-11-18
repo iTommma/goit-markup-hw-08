@@ -1,0 +1,16 @@
+.logo {
+    text-decoration: none;
+    color: #000000;
+    font-family: Raleway, sans-serif;
+    font-size: 26px;
+    line-height: 1.2;
+    font-weight: var(--font-weight-700);
+
+    footer & {
+        color: #ffffff;
+    }
+}
+
+.logo-web {
+    color: var(--accent-color);
+}

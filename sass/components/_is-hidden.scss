@@ -1,0 +1,9 @@
+.is-hidden {
+    visibility: hidden;
+    /* забирає можливість фокусу */
+    opacity: 0;
+    /* робить невидимим */
+    pointer-events: none;
+    /* неможливо клікнути */
+    font-size: 0;
+}
