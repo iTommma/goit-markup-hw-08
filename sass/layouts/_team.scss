@@ -1,35 +1,49 @@
 
 .poster {
-        display: flex;
-        justify-content: space-between;
-    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
 
-    &__card {
-        background: #fff;
-        border-radius: 0px 0px 4px 4px;
-        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-            0px 2px 1px rgba(0, 0, 0, 0.2);
+.poster__item {
+    width: calc(100% / 1 - 30px);
+
+    @media screen and (min-width: 768px) {
+        width: calc(100% / 2 - 30px);
+    }
+    @media screen and (min-width: 1200px) {
+        width: calc(100% / 4 - 30px);
     }
 
-    &__descr {
-        padding: 30px 0;
+    background: #fff;
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.poster__descr {
+    padding: 30px 0px 24px 0px;
+    @media screen and (min-width: 1200px) {
+        padding-bottom: 30px;
     }
 
-    &__subtitle {
-        color: var(--title-text-color);
-        font-weight: var(--font-weight-500);
-        font-size: var(--font-size-16);
-        line-height: 1.19;
-        text-align: center;
+}
 
-        margin-bottom: 10px;
-    }
+.poster__subtitle {
+    color: var(--title-text-color);
+    font-weight: var(--font-weight-500);
+    font-size: var(--font-size-16);
+    line-height: 1.19;
+    text-align: center;
 
-    &__text {
-        color: var(--primary-text-color);
-        font-size: var(--font-size-16);
-        line-height: 1.19;
-        text-align: center;
-        margin: 16px;
-    }
+    margin-bottom: 10px;
+}
+
+.poster__text {
+    color: var(--primary-text-color);
+    font-size: var(--font-size-16);
+    line-height: 1.19;
+    text-align: center;
+    margin: 16px;
 }

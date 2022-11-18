@@ -94,6 +94,19 @@ body {
   background-color: #F5F4FA;
 }
 
+@media screen and (max-width: 1199px) {
+  .section--hidden {
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+    /* забирає можливість фокусу */
+    opacity: 0;
+    /* робить невидимим */
+    pointer-events: none;
+    /* неможливо клікнути */
+    font-size: 0;
+  }
+}
 .container {
   width: 100%;
   padding: 0px 15px;
@@ -130,7 +143,6 @@ body {
   font-size: 0;
 }
 
-/* ---------------MAIN specialization & team */
 .section-title {
   font-size: 36px;
   line-height: 1.16;
@@ -519,16 +531,37 @@ footer .logo {
 
 .poster {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
 }
-.poster__card {
+
+.poster__item {
+  width: calc(100% - 30px);
   background: #fff;
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
-.poster__descr {
-  padding: 30px 0;
+@media screen and (min-width: 768px) {
+  .poster__item {
+    width: calc(50% - 30px);
+  }
 }
+@media screen and (min-width: 1200px) {
+  .poster__item {
+    width: calc(25% - 30px);
+  }
+}
+
+.poster__descr {
+  padding: 30px 0px 24px 0px;
+}
+@media screen and (min-width: 1200px) {
+  .poster__descr {
+    padding-bottom: 30px;
+  }
+}
+
 .poster__subtitle {
   color: var(--title-text-color);
   font-weight: var(--font-weight-500);
@@ -537,6 +570,7 @@ footer .logo {
   text-align: center;
   margin-bottom: 10px;
 }
+
 .poster__text {
   color: var(--primary-text-color);
   font-size: var(--font-size-16);

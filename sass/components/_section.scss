@@ -15,6 +15,16 @@
 }
 
 
-.section--hidden {
-    
+@media screen and (max-width: 1199px) {
+    .section--hidden {
+        width: 0px;
+        height: 0px;
+        visibility: hidden;
+        /* забирає можливість фокусу */
+        opacity: 0;
+        /* робить невидимим */
+        pointer-events: none;
+        /* неможливо клікнути */
+        font-size: 0;
+    }
 }
