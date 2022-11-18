@@ -72,17 +72,20 @@ body {
 .button {
   cursor: pointer;
   font-family: inherit;
+  display: block;
+  margin: 0 auto;
   border: none;
-  padding: 0.5rem 1.5rem;
   border-radius: 4px;
 }
 
 .section {
-  padding: 60px 0px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 @media screen and (min-width: 1200px) {
   .section {
-    padding: 94px 0px;
+    padding-top: 94px;
+    padding-bottom: 94px;
   }
 }
 
@@ -109,8 +112,8 @@ body {
 }
 .container {
   width: 100%;
-  padding: 0px 15px;
-  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
   outline: 1px solid tomato;
 }
 @media screen and (min-width: 480px) {
@@ -129,8 +132,9 @@ body {
   }
 }
 
-.container--padding0 {
-  padding: 0;
+.container--LRpading0 {
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .is-hidden {
@@ -421,28 +425,44 @@ footer .logo {
 }
 
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
   background-color: #2f303a;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
+
 .hero__container {
-  width: 100%;
-  max-width: 696px;
+  padding: 118px 15px 118px 15px;
+  outline: 1px solid tomato;
 }
+@media screen and (min-width: 1200px) {
+  .hero__container {
+    padding: 200px 0px;
+  }
+}
+
 .hero__title {
+  margin: 0 auto;
   color: var(--primary-white-color);
   letter-spacing: var(--letter-spacing-006);
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
   text-align: center;
   text-transform: uppercase;
   font-weight: 900;
+  width: 100%;
+  max-width: 360px;
   margin-bottom: 30px;
 }
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    max-width: 696px;
+    font-size: 44px;
+    line-height: 1.36;
+  }
+}
+
 .hero__button {
   background-color: var(--accent-color);
   color: var(--primary-white-color);
@@ -451,10 +471,13 @@ footer .logo {
   font-size: var(--font-size-16);
   letter-spacing: var(--letter-spacing-006);
   line-height: 1.88;
-  display: block;
-  margin: 0 auto;
-  width: 216px;
+  width: 200px;
   height: 50px;
+}
+@media screen and (min-width: 1200px) {
+  .hero__button {
+    width: 216px;
+  }
 }
 
 .card-list {
