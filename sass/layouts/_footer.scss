@@ -8,9 +8,10 @@ footer {
 .footer__container {
     display: flex;
     flex-wrap: wrap; //new
-
-    gap: 60px;
     justify-content: center; //new
+    row-gap: 60px;
+    column-gap: 165px;
+
     outline: 1px solid tomato;
 }
 
@@ -19,6 +20,10 @@ footer {
     display: block;
     margin-bottom: 20px;
     outline: 1px solid tomato;
+
+    @include desktop {
+        text-align: left;
+    }
 }
 
 // .footer__address-list {
@@ -31,7 +36,9 @@ footer {
     text-align: center;
     margin-top: 8px;
 
-    @media screen and (min-width: 1200px) { margin-bottom: 9px;
+    @include desktop {
+        margin-bottom: 9px;
+        text-align: left;
     }
 }
 
@@ -52,14 +59,11 @@ footer {
     &:focus {
         color: var(--accent-color);
     }
-
 }
 
 .footer__contact-link {
     color: rgba(255, 255, 255, 0.6);
 }
-
-
 
 /* ---------------FOOTER join and subscribe*/
 // .footer__items {
@@ -71,6 +75,12 @@ footer {
 // }
 
 /* ---------------FOOTER join */
+.footer__join {
+    @include tablet {
+        padding-top: 6px;
+    }
+}
+
 .join__title {
     font-weight: var(--font-weight-700);
     font-size: var(--font-size-14);
@@ -83,12 +93,18 @@ footer {
     margin-bottom: 20px;
 
     outline: 1px solid tomato;
+    @include desktop {
+        text-align: left;
+    }
 }
 
 /* ---------------FOOTER subscribe */
 .subscribe {
     width: 100%;
     max-width: 450px;
+    @include desktop {
+        width: 570px;
+    }
 }
 
 .subscribe__title {
@@ -101,13 +117,9 @@ footer {
 
     text-align: center;
     margin-bottom: 20px;
-}
-
-.subscribe__form {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    /* не працює геп */
+    @include desktop {
+            text-align: left;
+        }
 }
 
 .subscribe__input {
@@ -126,6 +138,8 @@ footer {
     // padding-left: 16px;
     // margin-right: 12px;
     margin-bottom: 20px; //new
+
+   
 }
 
 .footer__subscribe-input::placeholder {
