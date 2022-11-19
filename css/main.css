@@ -81,6 +81,7 @@ body {
 .section {
   padding-top: 60px;
   padding-bottom: 60px;
+  outline: 1px solid tomato;
 }
 @media screen and (min-width: 1200px) {
   .section {
@@ -99,17 +100,20 @@ body {
 
 @media screen and (max-width: 1199px) {
   .section--hidden {
-    width: 0px;
-    height: 0px;
-    visibility: hidden;
-    /* забирає можливість фокусу */
-    opacity: 0;
-    /* робить невидимим */
-    pointer-events: none;
-    /* неможливо клікнути */
-    font-size: 0;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    -webkit-clip-path: inset(100%);
+            clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
   }
 }
+
 .container {
   width: 100%;
   padding-left: 15px;
@@ -541,30 +545,31 @@ footer {
   color: var(--primary-text-color);
 }
 
-.pictures-list {
-  display: flex;
-  justify-content: space-between;
+@media screen and (min-width: 1200px) {
+  .pictures-list {
+    display: flex;
+    justify-content: space-between;
+  }
+  .pictures-list__item {
+    position: relative;
+  }
+  .pictures-list__top-container {
+    background: rgba(47, 48, 58, 0.8);
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+  .pictures-list__top-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 27px;
+  }
 }
-.pictures-list__item {
-  position: relative;
-}
-.pictures-list__top-container {
-  background: rgba(47, 48, 58, 0.8);
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-}
-.pictures-list__top-title {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  text-align: center;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  padding: 27px;
-}
-
 .poster {
   display: flex;
   flex-wrap: wrap;

@@ -6,6 +6,8 @@
         padding-top: 94px;
         padding-bottom: 94px;
     }
+
+    outline: 1px solid tomato;
 }
 
 .section--top {
@@ -17,16 +19,25 @@
 }
 
 
-@media screen and (max-width: 1199px) {
-    .section--hidden {
-        width: 0px;
-        height: 0px;
-        visibility: hidden;
-        /* забирає можливість фокусу */
-        opacity: 0;
-        /* робить невидимим */
-        pointer-events: none;
-        /* неможливо клікнути */
-        font-size: 0;
+
+.section--hidden {
+    @media screen and (max-width: 1199px) {
+        // display: none; // недоступна для індексації
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+        white-space: nowrap;
+        clip-path: inset(100%);
+        clip: rect(0 0 0 0);
+        overflow: hidden
+
+        // visibility: hidden; //забирає можливість фокусу
+        // opacity: 0; //робить невидимим
+        // pointer-events: none; //неможливо клікнути
+        // font-size: 0;
+
     }
 }

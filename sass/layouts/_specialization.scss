@@ -1,33 +1,33 @@
 
-
-// desktop version
+// стилі включаються від 1200
+@media screen and (min-width: 1200px) {
 .pictures-list {
     display: flex;
     justify-content: space-between;
+}
 
+.pictures-list__item {
+    position: relative;
+}
 
-    &__item {
-        position: relative;
-    }
+.pictures-list__top-container {
+    background: rgba(47, 48, 58, 0.8);
 
-    &__top-container {
-        background: rgba(47, 48, 58, 0.8);
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
 
-        width: 100%;
-        position: absolute;
-        bottom: 0;
-    }
+.pictures-list__top-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
 
-    &__top-title {
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 1.14;
-        text-align: center;
-        letter-spacing: 0.03em;
-        text-transform: uppercase;
+    color: #FFFFFF;
 
-        color: #FFFFFF;
-
-        padding: 27px;
-    }
+    padding: 27px;
+}
 }
