@@ -1,18 +1,18 @@
 .soc,
-.footer-soc-list {
+.footer__soc-list {
     display: flex;
     justify-content: center;
     gap: 10px;
 }
 
 .soc__item,
-.footer-soc-item {
+.footer__soc-item {
     width: 44px;
     height: 44px;
 }
 
 .soc__link,
-.footer-soc-link {
+.footer__soc-link {
     width: 100%;
     height: 100%;
     border-radius: 50%;
@@ -31,7 +31,7 @@
     }
 }
 
-.footer-soc-link {
+.footer__soc-link {
     background: rgba(255, 255, 255, 0.1);
 }
 
@@ -48,6 +48,6 @@
     }
 }
 
-.footer-soc-icon {
+.footer__soc-icon {
     fill: white;
 }

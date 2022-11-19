@@ -5,29 +5,44 @@ footer {
     background-color: #2f303a;
 }
 
-.footer-container {
+.footer__container {
     display: flex;
-    gap: 70px;
+    flex-wrap: wrap; //new
+
+    gap: 60px;
+    justify-content: center; //new
+    outline: 1px solid tomato;
 }
 
-footer .logo {
+.footer__logo {
+    text-align: center; //new
     display: block;
     margin-bottom: 20px;
+    outline: 1px solid tomato;
 }
 
-.footer-address-list {
-    display: flex;
-    flex-direction: column;
-    gap: 9px;
+// .footer__address-list {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 9px;
+// }
+
+.footer__address-item {
+    text-align: center;
+    margin-top: 8px;
+
+    @media screen and (min-width: 1200px) { margin-bottom: 9px;
+    }
 }
 
-.footer-address-link,
-.footer-contact-link {
+.footer__address-link,
+.footer__contact-link {
     text-decoration: none;
     font-style: normal;
     color: #ffffff;
     font-size: var(--font-size-14);
     line-height: 1.71;
+    letter-spacing: 0.03em;
 
     transition: color;
     transition-duration: 250ms;
@@ -40,59 +55,66 @@ footer .logo {
 
 }
 
-.footer-contact-link {
+.footer__contact-link {
     color: rgba(255, 255, 255, 0.6);
 }
 
 
 
 /* ---------------FOOTER join and subscribe*/
-.footer-items {
-    padding-top: 12px;
+// .footer__items {
+//     padding-top: 12px;
 
-    display: flex;
-    justify-content: space-between;
-    flex-grow: 1;
-}
+//     display: flex;
+//     justify-content: space-between;
+//     flex-grow: 1;
+// }
 
 /* ---------------FOOTER join */
-.footer-title-join {
+.join__title {
     font-weight: var(--font-weight-700);
     font-size: var(--font-size-14);
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-
     color: var(--primary-white-color);
 
+    text-align: center;
     margin-bottom: 20px;
+
+    outline: 1px solid tomato;
 }
 
 /* ---------------FOOTER subscribe */
+.subscribe {
+    width: 100%;
+    max-width: 450px;
+}
 
-.footer-title-subscribe {
+.subscribe__title {
     font-weight: var(--font-weight-700);
     font-size: var(--font-size-14);
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-
     color: #FFFFFF;
 
+    text-align: center;
     margin-bottom: 20px;
 }
 
-.footer-subscribe-form {
+.subscribe__form {
     display: flex;
     justify-content: center;
     gap: 12px;
     /* не працює геп */
 }
 
-.footer-subscribe-input {
+.subscribe__input {
     color: var(--primary-white-color);
 
-    width: 358px;
+    width: 100%;
+    max-width: 450px;
     height: 50px;
 
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -101,11 +123,12 @@ footer .logo {
     outline: none;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 
-    padding-left: 16px;
-    margin-right: 12px;
+    // padding-left: 16px;
+    // margin-right: 12px;
+    margin-bottom: 20px; //new
 }
 
-.footer-subscribe-input::placeholder {
+.footer__subscribe-input::placeholder {
     font-size: 16px;
     line-height: 1.25;
     letter-spacing: 0.03em;
@@ -113,7 +136,7 @@ footer .logo {
     color: rgba(255, 255, 255, 0.6);
 }
 
-.subscribe-button {
+.subscribe__button {
     width: 200px;
     height: 50px;
     background-color: var(--accent-color);
@@ -122,13 +145,15 @@ footer .logo {
 
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
+
+    margin: 0 auto;
 }
 
-.subscribe-button-text {
+.subscribe__button-text {
     font-weight: var(--font-weight-700);
     font-size: 16px;
     letter-spacing: 0.06em;
@@ -136,6 +161,6 @@ footer .logo {
     color: #FFFFFF;
 }
 
-.footer-subscribe-icon {
+.subscribe__button-icon {
     fill: var(--primary-white-color);
 }
