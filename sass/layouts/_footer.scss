@@ -12,14 +12,19 @@ footer {
     row-gap: 60px;
     column-gap: 165px;
 
-    outline: 1px solid tomato;
+    // outline: 1px solid tomato;
+
+    @include desktop {
+         column-gap: 70px;
+         justify-content: space-between;
+    }
 }
 
 .footer__logo {
     text-align: center; //new
     display: block;
     margin-bottom: 20px;
-    outline: 1px solid tomato;
+    // outline: 1px solid tomato;
 
     @include desktop {
         text-align: left;
@@ -75,11 +80,6 @@ footer {
 // }
 
 /* ---------------FOOTER join */
-.footer__join {
-    @include tablet {
-        padding-top: 6px;
-    }
-}
 
 .join__title {
     font-weight: var(--font-weight-700);
@@ -92,9 +92,10 @@ footer {
     text-align: center;
     margin-bottom: 20px;
 
-    outline: 1px solid tomato;
+    // outline: 1px solid tomato;
     @include desktop {
         text-align: left;
+        padding-top: 6px;
     }
 }
 
@@ -103,7 +104,8 @@ footer {
     width: 100%;
     max-width: 450px;
     @include desktop {
-        width: 570px;
+        max-width: 570px;
+        padding-left: 23px;
     }
 }
 
@@ -118,15 +120,25 @@ footer {
     text-align: center;
     margin-bottom: 20px;
     @include desktop {
-            text-align: left;
-        }
+        text-align: left;
+        padding-top: 6px;
+    }
+    // outline: 1px solid tomato;
+}
+
+.subscribe__form {
+    // outline: 1px solid tomato;
+    @include desktop {
+        display: flex;
+        gap: 12px;
+    }
 }
 
 .subscribe__input {
     color: var(--primary-white-color);
 
     width: 100%;
-    max-width: 450px;
+    // max-width: 450px;
     height: 50px;
 
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -139,7 +151,9 @@ footer {
     // margin-right: 12px;
     margin-bottom: 20px; //new
 
-   
+    @include desktop {
+        width: 358px;
+    }
 }
 
 .footer__subscribe-input::placeholder {
@@ -151,7 +165,8 @@ footer {
 }
 
 .subscribe__button {
-    width: 200px;
+    width: 100%;
+    max-width: 200px;
     height: 50px;
     background-color: var(--accent-color);
     border-radius: 4px;
@@ -165,6 +180,9 @@ footer {
     gap: 10px;
 
     margin: 0 auto;
+    @include desktop {
+        display: inline-flex;        
+    }
 }
 
 .subscribe__button-text {
