@@ -272,7 +272,12 @@ footer {
   background-color: currentColor;
   border-radius: 2px;
   position: absolute;
-  top: 46px;
+  top: 55px;
+}
+@media screen and (min-width: 1200px) {
+  .current::after {
+    top: 46px;
+  }
 }
 
 /* ---------------HEADER contacts */

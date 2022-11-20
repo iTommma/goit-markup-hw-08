@@ -77,7 +77,10 @@
         border-radius: 2px;
 
         position: absolute;
+        top: 55px;
+        @include desktop {
         top: 46px;
+        }
     }
 }
 
