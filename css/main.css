@@ -174,11 +174,18 @@ body {
   text-decoration: none;
   color: #000000;
   font-family: Raleway, sans-serif;
-  font-size: 26px;
-  line-height: 1.2;
+  font-size: 24px;
+  line-height: 1.17;
   font-weight: var(--font-weight-700);
 }
-footer .logo {
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    line-height: 1.2;
+  }
+}
+
+footer {
   color: #ffffff;
 }
 
@@ -187,10 +194,22 @@ footer .logo {
 }
 
 .header {
-  padding-top: 24px;
-  padding-bottom: 25px;
-  border: 1px solid #ececec;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #ececec;
   /* position: relative; */
+}
+@media screen and (min-width: 768px) {
+  .header {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
 }
 
 .header__container {
@@ -208,11 +227,21 @@ footer .logo {
 }
 
 .nav__list {
-  display: inline-flex;
-  justify-content: space-between;
-  gap: 50px;
-  margin-left: 93px;
-  /* outline: 1px solid tomato; */
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .nav__list {
+    display: inline-flex;
+    justify-content: space-between;
+    gap: 50px;
+    margin-left: 88px;
+    /* outline: 1px solid tomato; */
+  }
+}
+@media screen and (min-width: 1200px) {
+  .nav__list {
+    margin-left: 92px;
+  }
 }
 
 .nav__link {
@@ -248,18 +277,30 @@ footer .logo {
 
 /* ---------------HEADER contacts */
 .contact {
-  display: inline-flex;
-  justify-content: center;
-  gap: 30px;
-  /* outline: 1px solid tomato; */
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+  }
 }
 
 .contact__link {
   text-decoration: none;
   color: var(--primary-text-color);
-  font-size: var(--font-size-14);
+  font-size: 16px;
   letter-spacing: 0.02em;
-  line-height: 1.14;
+  line-height: 1.17;
   font-weight: var(--font-weight-500);
   display: flex;
   gap: 10px;
@@ -269,6 +310,12 @@ footer .logo {
 }
 .contact__link:hover, .contact__link:focus {
   color: var(--accent-color);
+}
+@media screen and (min-width: 1200px) {
+  .contact__link {
+    font-size: var(--font-size-14);
+    line-height: 1.14;
+  }
 }
 
 .contact__icon {
@@ -289,6 +336,21 @@ footer .logo {
 .header-tel::before {
   content: url("../images/smartphone.svg");
   margin-right: 10px;
+}
+
+.menu-open {
+  display: flex;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  margin-left: auto;
+}
+@media screen and (min-width: 768px) {
+  .menu-open {
+    display: none;
+  }
 }
 
 footer {
@@ -357,7 +419,6 @@ footer {
   color: rgba(255, 255, 255, 0.6);
 }
 
-/* ---------------FOOTER join and subscribe*/
 /* ---------------FOOTER join */
 .join__title {
   font-weight: var(--font-weight-700);

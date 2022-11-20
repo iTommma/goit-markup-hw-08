@@ -1,8 +1,18 @@
 .header {
-    padding-top: 24px;
-    padding-bottom: 25px;
-    border: 1px solid #ececec;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #ececec;
+    
     /* position: relative; */
+    @include tablet {
+        padding-top: 26px;
+        padding-bottom: 26px;
+        }
+
+    @include desktop {
+        padding-top: 24px;
+        padding-bottom: 25px;
+    }
 }
 
 .header__container {
@@ -21,11 +31,18 @@
 }
 
 .nav__list {
-    display: inline-flex;
-    justify-content: space-between;
-    gap: 50px;
-    margin-left: 93px;
-    /* outline: 1px solid tomato; */
+    display: none;
+
+    @include tablet {
+        display: inline-flex;
+        justify-content: space-between;
+        gap: 50px;
+        margin-left: 88px;
+        /* outline: 1px solid tomato; */
+    }
+    @include desktop {
+        margin-left: 92px;
+    }
 }
 
 .nav__link {
@@ -66,18 +83,31 @@
 
 /* ---------------HEADER contacts */
 .contact {
-    display: inline-flex;
-    justify-content: center;
-    gap: 30px;
-    /* outline: 1px solid tomato; */
+    display: none;
+    // outline: 1px solid tomato;
+
+    @include tablet{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+    }
+
+    @include desktop {
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 30px;
+
+    }
 }
 
 .contact__link {
     text-decoration: none;
     color: var(--primary-text-color);
-    font-size: var(--font-size-14);
+    font-size: 16px;
     letter-spacing: 0.02em;
-    line-height: 1.14;
+    line-height: 1.17;
     font-weight: var(--font-weight-500);
 
     display: flex;
@@ -90,6 +120,11 @@
     &:hover,
     &:focus {
         color: var(--accent-color);
+    }
+
+    @include desktop {
+        font-size: var(--font-size-14);
+        line-height: 1.14;
     }
 }
 
@@ -119,3 +154,159 @@
         margin-right: 10px;
     }
 }
+
+.menu-open {
+    display: flex;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    margin-left: auto;
+
+    @include tablet {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .header {
+//     padding-top: 24px;
+//     padding-bottom: 25px;
+//     border: 1px solid #ececec;
+//     /* position: relative; */
+// }
+
+// .header__container {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     /* outline: 1px solid tomato; */
+// }
+
+// /* ---------------HEADER nav */
+
+// .nav {
+//     display: inline-flex;
+//     align-items: center;
+//     /* outline: 1px solid tomato; */
+// }
+
+// .nav__list {
+//     display: inline-flex;
+//     justify-content: space-between;
+//     gap: 50px;
+//     margin-left: 93px;
+//     /* outline: 1px solid tomato; */
+// }
+
+// .nav__link {
+//     text-decoration: none;
+//     color: var(--title-text-color);
+//     font-size: var(--font-size-14);
+//     letter-spacing: 0.02em;
+//     line-height: 1.14;
+//     font-weight: var(--font-weight-500);
+
+//     transition-property: color;
+//     transition-duration: 250ms;
+//     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+//     &:hover,
+//     &:focus {
+//         color: var(--accent-color);
+//         position: relative;
+//     }
+// }
+
+// .current {
+//     color: var(--accent-color);
+//     position: relative;
+
+//     &::after {
+//         content: "";
+//         display: flex;
+//         width: 100%;
+//         height: 4px;
+//         background-color: currentColor;
+//         border-radius: 2px;
+
+//         position: absolute;
+//         top: 46px;
+//     }
+// }
+
+// /* ---------------HEADER contacts */
+// .contact {
+//     display: inline-flex;
+//     justify-content: center;
+//     gap: 30px;
+//     /* outline: 1px solid tomato; */
+// }
+
+// .contact__link {
+//     text-decoration: none;
+//     color: var(--primary-text-color);
+//     font-size: var(--font-size-14);
+//     letter-spacing: 0.02em;
+//     line-height: 1.14;
+//     font-weight: var(--font-weight-500);
+
+//     display: flex;
+//     gap: 10px;
+
+//     transition-property: color;
+//     transition-duration: 250ms;
+//     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+//     &:hover,
+//     &:focus {
+//         color: var(--accent-color);
+//     }
+// }
+
+// .contact__icon {
+//     fill: #757575;
+
+//     transition-property: fill;
+//     transition-duration: 250ms;
+//     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+//     .contact__link:hover &,
+//     .contact__link:focus & {
+//         fill: var(--accent-color);
+//     }
+// }
+
+// .header-mail {
+//     &::before {
+//         content: url('../images/envelope.svg');
+//         margin-right: 10px;
+//     }
+// }
+
+// .header-tel {
+//     &::before {
+//         content: url('../images/smartphone.svg');
+//         margin-right: 10px;
+//     }
+// }
