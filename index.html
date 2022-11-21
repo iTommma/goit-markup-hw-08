@@ -61,11 +61,11 @@
     </div>
 
     <!-- Моб меню -->
-    <div class="mob-menu is-hidden" data-menu>
+    <div class="backdrop mob-menu is-hidden" data-menu>
       <div class="mob-menu__container">
         <button type="button" class="button mob-menu__close" data-menu-close>
           <svg class="mob-menu__icon" width="24" height="24">
-            <use href="./images/icons.svg#icon-close"></use>
+            <use href="./images/icons.svg#icon-closemobmenu"></use>
           </svg>
         </button>
   
@@ -628,7 +628,6 @@
           </svg>
         </label>
 
-
         <label class="modal-form-label">
           <span class="modal-label-title">Коментар</span>
           <textarea class="modal-form-textarea" name="feedback" placeholder="Введіть текст"></textarea>
@@ -636,13 +635,16 @@
 
 
         <input class="modal-form-inputcheck is-hidden" type="checkbox" name="accept" value="true" id="check" />
+        
         <label class="check-text" for="check">
-          &nbsp; Погоджуюся з розсилкою та приймаю &nbsp; 
-          <a class="check-link" href="">Умови договору</a>&nbsp;
+          <span>
+            Погоджуюся з розсилкою та приймаю &nbsp; 
+            <a class="check-link" href="">Умови договору</a>
+          </span>
         </label>
 
 
-        <button class="modal-send-button" type="submit"><span class="send-button-text">Відправити</span></button>
+        <button class="button modal-send-button" type="submit"><span class="send-button-text">Відправити</span></button>
 
       </form>
     </div>

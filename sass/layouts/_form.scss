@@ -18,6 +18,10 @@
     margin-bottom: 10px;
 }
 
+// .modal-form-label:last-child {
+//     margin-bottom: 20px; //не працюэ
+// }
+
 .modal-label-title {
     font-size: 12px;
     line-height: 1.16;
@@ -99,14 +103,24 @@
     letter-spacing: 0.03em;
     color: var(--primary-text-color);
 
-    margin: 0 auto 30px 12px;
-    display: flex;
+    width: 100%;
+    margin: 10px auto 30px auto;
+
+    display: inline-flex;
     align-items: center;
+    justify-content: center;
+
+    @media screen and(max-width: 510px) {
+        font-size: 12px;
+        line-height: calc(14 / 12);
+    }
 
     &::before {
         content: '';
         width: 16px;
         height: 15px;
+        margin-right: 8px;
+
         border: 2px solid #212121;
         border-radius: 2px;
 
@@ -133,7 +147,7 @@
 
 /* button */
 .modal-send-button {
-    width: 200px;
+    max-width: 200px;
     height: 50px;
     margin: 0 auto;
 
@@ -141,10 +155,6 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     border: 0;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .send-button-text {
