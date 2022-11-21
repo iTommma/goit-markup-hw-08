@@ -38,8 +38,7 @@
         justify-content: space-between;
         gap: 50px;
         margin-left: 88px;
-        /* outline: 1px solid tomato; */
-    }
+        }
     @include desktop {
         margin-left: 92px;
     }
@@ -79,7 +78,7 @@
         position: absolute;
         top: 55px;
         @include desktop {
-        top: 46px;
+            top: 46px;
         }
     }
 }
@@ -159,18 +158,17 @@
 }
 
 .menu-open {
-    display: flex;
-    align-items: center;
     width: 40px;
     height: 40px;
     background-color: transparent;
-    border: none;
+
     margin-left: auto;
 
     @include tablet {
         display: none;
     }
 }
+
 
 
 
